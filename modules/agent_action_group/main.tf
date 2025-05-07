@@ -1,5 +1,5 @@
 # Bedrock Agent Action Group
-resource "aws_bedrockagent_agent_action_group" "my_action_group" {
+resource "aws_bedrockagent_agent_action_group" "bedrock_agent_action_group" {
   agent_id          = var.agent_id
   action_group_name = var.action_group_name
   # Use API schema if provided
