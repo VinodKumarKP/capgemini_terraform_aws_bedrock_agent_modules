@@ -6,7 +6,7 @@ resource "aws_bedrockagent_agent" "bedrock_agent" {
 
   # This depends on aws_bedrock_agent_action_group resource below
   skip_resource_in_use_check = true
-  prepare_agent = var.prepare_agent
+  prepare_agent              = var.prepare_agent
 }
 
 
