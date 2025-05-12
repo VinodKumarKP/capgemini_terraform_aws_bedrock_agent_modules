@@ -71,3 +71,9 @@ variable "functions_json_file" {
   type        = string
   default     = ""
 }
+
+variable "lambda_layers_arn" {
+  description = "ARN of the Lambda layer"
+  type        = list(string)
+  default     = []
+}

@@ -24,6 +24,8 @@ module "lambda_function" {
 
   tags = merge({ name = var.function_name }, var.tags)
 
+  layers = var.layers_arn
+
 }
 
 resource "aws_lambda_permission" "lambda_policy" {

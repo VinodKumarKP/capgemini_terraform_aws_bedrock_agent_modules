@@ -53,3 +53,9 @@ variable "handler" {
   type        = string
   default     = "lambda_function.lambda_handler"
 }
+
+variable "layers_arn" {
+  description = "ARN of the layers for the Lambda function"
+  type        = list(string)
+  default     = []
+}
