@@ -77,3 +77,9 @@ variable "lambda_layers_arn" {
   type        = list(string)
   default     = []
 }
+
+
+variable "agent_instructions" {
+  description = "Instructions for the agent"
+  type        = string
+}

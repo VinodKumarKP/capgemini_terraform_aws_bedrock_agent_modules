@@ -32,7 +32,7 @@ module "bedrock_agent" {
   agent_name                       = local.agent_name
   action_group_executor_lambda_arn = module.lambda.function_arn
   bedrock_agent_role_arn           = module.agent_iam.agent_role_arn
-  agent_instructions               = "You are a helpful assistant that processes data and answers questions."
+  agent_instructions               = var.agent_instructions
   agent_action_group_api_schema    = var.agent_action_group_api_schema
   functions_json_file              = var.functions_json_file
 }
