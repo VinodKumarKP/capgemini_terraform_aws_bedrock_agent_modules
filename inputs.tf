@@ -78,6 +78,12 @@ variable "lambda_layers_arn" {
   default     = []
 }
 
+variable "lambda_memory_size" {
+  description = "Memory size of the Lambda function"
+  type        = number
+  default     = 128
+}
+
 
 variable "agent_instructions" {
   description = "Instructions for the agent"

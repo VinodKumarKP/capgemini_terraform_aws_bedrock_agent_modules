@@ -23,8 +23,9 @@ module "lambda" {
     "environment" = var.environment
     "agent_name"  = local.agent_name
   }
-  handler    = var.lambda_handler
-  layers_arn = var.lambda_layers_arn
+  handler     = var.lambda_handler
+  layers_arn  = var.lambda_layers_arn
+  memory_size = var.lambda_memory_size
 }
 
 module "bedrock_agent" {

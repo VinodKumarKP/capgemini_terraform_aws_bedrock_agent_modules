@@ -7,6 +7,7 @@ module "lambda_function" {
   handler       = var.handler
   runtime       = var.runtime
   timeout       = var.timeout
+  memory_size   = var.memory_size
 
   create_role = false
   lambda_role = var.role_arn

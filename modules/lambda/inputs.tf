@@ -59,3 +59,9 @@ variable "layers_arn" {
   type        = list(string)
   default     = []
 }
+
+variable "memory_size" {
+  description = "Memory size for the Lambda function"
+  type        = number
+  default     = 128
+}
