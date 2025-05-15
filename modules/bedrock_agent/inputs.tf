@@ -6,7 +6,7 @@ variable "agent_name" {
 variable "agent_model_name" {
   description = "Name of the model"
   type        = string
-  default     = "anthropic.claude-3-5-sonnet-20240620-v1:0"
+  default     = "anthropic.claude-3-5-sonnet-20241022-v2:0"
 }
 
 variable "bedrock_agent_role_arn" {

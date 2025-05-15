@@ -36,4 +36,5 @@ module "bedrock_agent" {
   agent_instructions               = var.agent_instructions
   agent_action_group_api_schema    = var.agent_action_group_api_schema
   functions_json_file              = var.functions_json_file
+  agent_model_name                 = var.agent_model_name
 }
