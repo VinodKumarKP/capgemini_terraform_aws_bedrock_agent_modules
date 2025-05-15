@@ -26,6 +26,3 @@ resource "aws_bedrockagent_agent_alias" "bedrock_agent_alias" {
   description      = var.agent_alias_description
 }
 
-data "aws_bedrock_inference_profile" "profile" {
-    model_name = var.agent_model_name
-}
