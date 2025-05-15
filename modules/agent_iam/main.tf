@@ -78,7 +78,7 @@ resource "aws_iam_policy" "bedrock_agent_policy" {
           "bedrock:InvokeModel",
           "bedrock:InvokeModelWithResponseStream"
         ],
-        Resource = "arn:aws:bedrock:us-east-1::foundation-model/${var.model_name}"
+        Resource = "arn:aws:bedrock:*::foundation-model/${var.model_name}"
         Effect   = "Allow"
       }
     ]
