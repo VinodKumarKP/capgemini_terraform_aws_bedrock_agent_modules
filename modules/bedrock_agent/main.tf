@@ -24,5 +24,6 @@ resource "aws_bedrockagent_agent_alias" "bedrock_agent_alias" {
   agent_id         = aws_bedrockagent_agent.bedrock_agent.id
   agent_alias_name = var.agent_alias_name
   description      = var.agent_alias_description
+  depends_on = [module.agent_action_group]
 }
 
