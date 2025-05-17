@@ -30,7 +30,7 @@ module "lambda_function" {
 }
 
 resource "aws_lambda_permission" "lambda_policy" {
-  statement_id  = "AllowExecutionFromBedrock-${var.prefix}"
+  statement_id  = "AllowExecutionFromBedrock${var.prefix}"
   action        = "lambda:InvokeFunction"
   function_name = module.lambda_function.lambda_function_name
   principal     = "bedrock.amazonaws.com"
