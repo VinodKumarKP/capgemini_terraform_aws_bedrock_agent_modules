@@ -75,9 +75,14 @@ resource "aws_iam_policy" "bedrock_agent_policy" {
         Sid = "AmazonBedrockAgentBedrockFoundationModelPolicyProd",
         Action = [
           "bedrock:InvokeModel",
-          "bedrock:InvokeModelWithResponseStream"
+          "bedrock:InvokeModelWithResponseStream",
+          "bedrock:GetInferenceProfile",
+          "bedrock:GetFoundationModel"
         ],
-        Resource = "arn:aws:bedrock:*::foundation-model/${var.model_name}"
+        Resource = [
+          "arn:aws:bedrock:*::foundation-model/${var.model_name}",
+          "arn:aws:bedrock:*:*:inference-profile/*"
+        ]
         Effect   = "Allow"
       }
     ]
