@@ -65,3 +65,8 @@ variable "memory_size" {
   type        = number
   default     = 128
 }
+
+variable "prefix" {
+  description = "Prefix for the Lambda function"
+  type        = string
+}
