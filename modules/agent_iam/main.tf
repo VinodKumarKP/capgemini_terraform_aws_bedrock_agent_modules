@@ -47,6 +47,7 @@ resource "aws_iam_role_policy_attachment" "lambda_policy_attachment" {
 
 resource "aws_iam_role" "agent_role" {
   name = "bedrock_agent_role-${var.prefix}"
+  path = "/service-role/"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
