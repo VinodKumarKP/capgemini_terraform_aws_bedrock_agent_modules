@@ -26,7 +26,7 @@ resource "aws_bedrockagent_agent_alias" "bedrock_agent_alias" {
   description      = var.agent_alias_description
   depends_on       = [module.agent_action_group, aws_bedrockagent_agent.bedrock_agent]
   lifecycle {
-    replace_triggered_by = [module.agent_action_group, aws_bedrockagent_agent.bedrock_agent]
+    replace_triggered_by = [module.agent_action_group.agent_group_id, aws_bedrockagent_agent.bedrock_agent.id]
   }
 }
 
