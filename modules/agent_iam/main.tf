@@ -84,7 +84,7 @@ resource "aws_iam_policy" "bedrock_agent_policy" {
           "arn:aws:bedrock:*::foundation-model/${var.model_name}",
           "arn:aws:bedrock:*:*:inference-profile/*"
         ]
-        Effect   = "Allow"
+        Effect = "Allow"
       }
     ]
   })
