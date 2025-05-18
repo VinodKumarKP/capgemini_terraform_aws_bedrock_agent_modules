@@ -95,3 +95,9 @@ resource "aws_iam_role_policy_attachment" "bedrock_agent_policy_attachment" {
   role       = aws_iam_role.agent_role.name
   policy_arn = aws_iam_policy.bedrock_agent_policy.arn
 }
+
+# Attach the policy to the role
+resource "aws_iam_role_policy_attachment" "bedrock_agent_policy_attachment_bedrock_access" {
+  role       = aws_iam_role.agent_role.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonBedrockFullAccess"
+}
